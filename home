@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      padding: 2rem 1rem;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    
+   
+    main {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 3rem 1rem;
+    }
+
+    @media (min-width: 600px) {
+      main {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 900px) {
+      main {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    .product-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .product-card h2 {
+      margin: 1rem 0;
+      font-size: 1.5rem;
+    }
+
+    .product-card p {
+      font-size: 1rem;
+      color: #777;
+    }
+
+    .details-button {
+      background: #007bff;
+      color: white;
+      padding: 0.6rem 1.5rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      text-transform: uppercase;
+      margin-top: 1rem;
+    }
+
+    .details-button:hover {
+      background: #0056b3;
+    }
+
+    .shop-image {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 15px;
+      margin: 2rem auto;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: auto;
+    }
+
+    .map-container {
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .about-section {
+      background: #f0f0f0;
+      padding: 2rem 1rem;
+      text-align: center;
+      margin: 2rem auto;
+      border-radius: 10px;
+    }
+
+    .about-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-section p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+
+
+
+
+
+    .owner-card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 300px;
+      margin: 2rem auto;
+    }
+
+    .owner-card img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .owner-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .owner-card p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+
+    .gallery {
+      padding: 2rem 1rem;
+      background: #f9f9f9;
+    }
+
+    .gallery h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .swiper-container {
+      width: 100%;
+      padding: 2rem 0;
+      position: relative;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+      color: #333;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+   
+  </style>
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+  <header>
+    <h1>Singh Jewellers</h1>
+    <p>Raunapar road latghat Azamgarh</p>
+   
+  </header>
+
+
+  <section class="gallery"></section>
+    <h2>Photo Gallery</h2>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://via.placeholder.com/150" alt="Gallery Image 1"></div>
+        <div class="swiper-slide"><img src="https://via.placeholder.com/150" alt="Gallery Image 2"></div>
+        <div class="swiper-slide"><img src="https://via.placeholder.com/150" alt="Gallery Image 3"></div>
+        <div class="swiper-slide"><img src="https://via.placeholder.com/150" alt="Gallery Image 4"></div>
+        <div class="swiper-slide"><img src="https://via.placeholder.com/150" alt="Gallery Image 5"></div>
+        <div class="swiper-slide"><img src="https://via.placeholder.com/150" alt="Gallery Image 6"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+  <main>
+
+  <div class="product-card">
+    <!-- <img src="https://via.placeholder.com/300" alt="Product 1"> -->
+    <h2>Specialization:</h2>
+    <p>Gold, Silver, Diamond, and Gemstone Jewellery
+
+       Traditional and Modern Designs Available</p>
+       <!-- <button class="details-button">View Details</button> -->
+  </div>
+  <div class="product-card">
+    <!-- <img src="https://via.placeholder.com/300" alt="Product 2"> -->
+    <h2>Services:
+
+</h2>
+    <ul><li><p>Customized Jewellery Design</p></li>
+        <li><p>Jewellery Repair and Polishing</p></li>
+        <li><p>Valuation and Certification</p></li></ul>
+   
+    <!-- <button class="details-button">View Details</button> -->
+  </div>
+
+  <div class="product-card">
+    <!-- <img src="https://via.placeholder.com/300" alt="Product 2"> -->
+    <h2>Quality:
+
+</h2>
+    <ul><li><p>Hallmark Certified Gold and Silver</p></li>
+        <li><p>हॉलमार्क प्रमाणित सोना और चांदी</p></li>
+        <li><p>100 प्रतिशत शुद्धता की गारंटी
+        </p></li></ul>
+   
+    <!-- <button class="details-button">View Details</button> -->
+    </div>
+
+
+
+  
+ 
+    <img src="https://www.google.com/imgres?q=jewellery%20shop%20near%20me&imgurl=https%3A%2F%2Fm.reliancejewels.com%2Fresources_new%2Fimages%2Fshop-by-category_gold.jpg&imgrefurl=https%3A%2F%2Fwww.marriageregisterinchandigarh.com%2F%3Fm%3D241237221&docid=3d83aiQqn-5QcM&tbnid=dMoRmSjjKoxmPM&vet=12ahUKEwjAjdznuqqLAxXhkVYBHWmDLGYQM3oECCEQAA..i&w=500&h=400&hcb=2&ved=2ahUKEwjAjdznuqqLAxXhkVYBHWmDLGYQM3oECCEQAA" class="shop-image">
+
+    
+    <div class="owner-card">
+        <img src="https://via.placeholder.com/150" alt="Shop Owner">
+        <h3>ajit singh</h3>
+        <p>prop singh jeweller</p>
+        <p>Contact: +1111111111</p>
+        <p>Email: ajit@gmail.com</p>
+      </div>
+    <!-- <div class="product-card">
+      <img src="https://via.placeholder.com/300" alt="Product 2">
+      <h2>Wireless Headphones</h2>
+      <p>Experience unparalleled sound quality on the go.</p>
+      <button class="details-button">View Details</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300" alt="Product 3">
+      <h2>Smart Watch</h2>
+      <p>Track your fitness and stay connected in style.</p>
+      <button class="details-button">View Details</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300" alt="Product 4">
+      <h2>Home Speaker</h2>
+      <p>Fill your home with rich, high-quality sound.</p>
+      <button class="details-button">View Details</button>
+    </div>--><section class="about-section">
+        <h2>About Us</h2>
+        <p> Gold, Silver, Diamond, and Gemstone Jewellery</p>
+        <p> सोना, चांदी, हीरे, और रत्नों की ज्वेलरी
+    
+             पारंपरिक और आधुनिक डिज़ाइन उपलब्ध</p>
+
+             <h2>Contact Us</h2>
+             <p>999999999 Raunapar road latghat Azamgarh 276136 </p>
+      </section>
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ShopEase. All rights reserved.</p>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.8944743602015!2d83.380569!3d26.221155600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39919d197994c65d%3A0xaddc9d98b781c6c5!2sSingh%20Jewellers%20Raunapar%20road%20latghat%20Azamgarh!5e1!3m2!1sen!2sin!4v1738685735621!5m2!1sen!2sin" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
